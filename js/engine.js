@@ -82,23 +82,28 @@ var Engine = (function(global) {
         checkCollisions();
     }
 
-    /* This is called by the update function and loops through all of the
-     * objects within your allEnemies array as defined in app.js and calls
-     * their update() methods. It will then call the update function for your
-     * player object. These update methods should focus purely on updating
-     * the data/properties related to the object. Do your drawing in your
-     * render methods.
-     */
+    // Added a check collisions funciton which uses the 2d rectangle collision detection
+    // found on MDN https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
+
     function checkCollisions() {
       for(let i = 0; i < allEnemies.length; i++){
         if (allEnemies[i].x < player.x + player.width &&
             allEnemies[i].x + allEnemies[i].width > player.x &&
             allEnemies[i].y < player.y + player.height &&
             allEnemies[i].height + allEnemies[i].y > player.y) {
-              console.log("Collission!");}
+                player.x = 200;
+                player.y = 420;
+              }
             }
           }
 
+          /* This is called by the update function and loops through all of the
+           * objects within your allEnemies array as defined in app.js and calls
+           * their update() methods. It will then call the update function for your
+           * player object. These update methods should focus purely on updating
+           * the data/properties related to the object. Do your drawing in your
+           * render methods.
+           */
     function updateEntities(dt) {
         allEnemies.forEach(function(enemy) {
             enemy.update(dt);
