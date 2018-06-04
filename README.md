@@ -1,6 +1,30 @@
-frontend-nanodegree-arcade-game
-===============================
+# Frontend Nanodegree Arcade Game (Frogger Clone)
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+This project was meant to demonstrate an understanding of JavaScript classes and the this keyword, as well as using object-oriented programming.
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Getting Started
+
+In order to play the game, download the repo as a .zip file to your local directory. Once downloaded, unzip the file and open the index.html file to start the game.
+
+### Prerequisites
+
+All resources needed are contained within the repo.
+
+### Playing the Game
+
+1. Control the character by using your Arrow Keys to move up, down, left and right.
+2. Navigate the character to the water, avoiding the bugs along the way.
+3. Once you reach the river, you will be successfully reset back to the beginning.
+4. If a bug touches you, you will be unsuccessfully reset back to the beginning.
+
+## Authors
+
+* **Christopher Von Wilczur** - *Initial work* - [cvonwilczur](https://github.com/cvonwilczur)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Udacity for the initial game engine resources
