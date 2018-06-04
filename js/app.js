@@ -17,23 +17,44 @@ class Enemy {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 }
-
 // Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
-
-
+class Player extends Enemy{
+  constructor(xaxis,yaxis){
+    super(xaxis,yaxis);
+    this.sprite = 'images/char-boy.png';
+  }
+  // this.update();
+  //
+  // this.render();
+  handleInput(key) {
+    if (key == 'left'){
+        this.xaxis += 50;
+        console.log('Left!');
+        console.log(this.xaxis);
+    } else if(key == 'right'){
+        this.xaxis -= 50;
+        console.log('Right!');
+    } else if(key == 'down'){
+      this.yaxis -= 50;
+        console.log('Down!');
+    } else if(key == 'up'){
+      this.yaxis += 50;
+      console.log('Up!');
+    }
+  };
+}
 // Now instantiate your objects.
-const EnemyOne = new Enemy(50, 50);
-const EnemyTwo = new Enemy(60, 60);
-const EnemyThree = new Enemy(70,70);
-const EnemyFour = new Enemy(80,80);
+const enemyOne = new Enemy(50, 50);
+const enemyTwo = new Enemy(60, 60);
+const enemyThree = new Enemy(70,70);
+const enemyFour = new Enemy(80,80);
+const playerOne = new Player(100,100);
 // Place all enemy objects in an array called allEnemies
 
-const allEnemies = [EnemyOne,EnemyTwo,EnemyThree,EnemyFour]
+const allEnemies = [enemyOne,enemyTwo,enemyThree,enemyFour]
 // Place the player object in a variable called player
 
-
+const player = playerOne;
 
 
 // This listens for key presses and sends the keys to your
