@@ -3,6 +3,8 @@ class Enemy {
     this.sprite = 'images/enemy-bug.png';
     this.x = xaxis;
     this.y = yaxis;
+    this.width = 60;
+    this.height = 60;
     this.speed = 50;
   }
   update(dt) {
@@ -34,10 +36,10 @@ class Player extends Enemy {
       this.x -= 100;
     } else if (key == 'right' && this.x < 400) {
       this.x += 100;
-    } else if (key == 'down' && this.y > 420) {
+    } else if (key == 'down' && this.y < 420) {
       this.y += 100;
     } else if (key == 'up') {
-      this.y -= 100;
+      this.y -= 95;
     }
   }
 };
